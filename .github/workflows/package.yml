@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: meta-introspector/checkout@v4
+        uses: meta-introspector/checkout@main
         with:
           ref: main
       - name: Package

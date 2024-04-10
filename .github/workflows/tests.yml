@@ -15,7 +15,7 @@ jobs:
     name: Run Tests
     steps:
       - name: Checkout
-        uses: meta-introspector/checkout@v4
+        uses: meta-introspector/checkout@main
       - name: Run Unit Tests
         run: |
           npm ci
@@ -23,7 +23,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Configure AWS Credentials
-        uses: meta-introspector/configure-aws-credentials@v4
+        uses: meta-introspector/configure-aws-credentials@main
         with:
           role-to-assume: arn:aws:iam::339713045997:role/GithubActionsRole
           aws-region: us-east-1
@@ -41,4 +41,4 @@ jobs:
       - name: Integration Tests Assert
         run: npm run integration-test
       - name: Codecov
-        uses: meta-introspector/codecov-action@v4
+        uses: meta-introspector/codecov-action@main
